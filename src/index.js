@@ -12,12 +12,6 @@ io.on("connect", (socket) => {
 });
 
 
-app.use(express.static("public", {
-    setHeaders: (res, path) => {
-        if (path.endsWith('.js')) {
-        res.setHeader('Content-Type', 'text/javascript');
-        }
-    }
-}));
+app.use(express.static("public"));
 
 httpServer.listen(5000);
