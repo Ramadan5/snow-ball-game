@@ -8,7 +8,7 @@ const httpServer = createServer(app);
 const io = new Server(httpServer);
 
 io.on("connect", (socket) => {
-    console.log(socket);
+    console.log("socket-ID", socket.id);
 });
 
 
